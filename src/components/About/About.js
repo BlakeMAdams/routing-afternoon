@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 
-export default class About extends Component {
+export default function(props) {
 
-render() {
-    return (
-        <div>
-            <h1>About</h1>
-        </div>
-    )
-}
+        return (
+            <div>
+                <nav>
+                    <Link to='/about/history' >History</Link>
+                    <Link to='/about/contact' >Contact</Link>
+                </nav>
+                {props.children}
+            </div>
+        )
 
-
-    
 }
